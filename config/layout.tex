@@ -1,0 +1,148 @@
+\usepackage{ifthen}
+
+% page dimensions
+%--------------------------------------
+% see https://de.sharelatex.com/learn/Page_size_and_margins
+\usepackage{geometry}\geometry{
+    a4paper, % a4 size 210x297 mm
+    left=40mm,
+    right=20mm,
+    top=25mm,
+    bottom=25mm,
+    footskip=10mm,
+    headheight=20mm % required for header
+}
+%--------------------------------------
+
+% reduce chapter margin
+\renewcommand*{\chapterheadstartvskip}{\vspace*{0mm}}
+
+% Multi line comments
+%--------------------------------------
+\usepackage{verbatim}
+%--------------------------------------
+
+% font
+%--------------------------------------
+\usepackage{fontspec}
+
+\ifthenelse{\equal{\CONFIGFontFamily}{Arial}}
+    {
+        % Arial - Uses 11pt
+        \setmainfont{arial.ttf}[Ligatures=TeX,Path =fonts/Arial/,BoldFont = arialbd.ttf ,ItalicFont = ariali.ttf ,BoldItalicFont = arialbi.ttf ]
+    }
+    {
+        % Times New Roman - Uses 12pt
+        \setmainfont{times.ttf}[Ligatures=TeX ,Path =fonts/Times New Roman/,BoldFont = timesbd.ttf ,ItalicFont = timesi.ttf ,BoldItalicFont = timesbi.ttf ]
+    }
+
+% set line height/spacing
+\renewcommand{\baselinestretch}{1.5}
+
+% German hyphenation
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+%--------------------------------------
+
+% Remove indentation
+%--------------------------------------
+\parindent0pt
+%-------------------------------------
+
+% defintions
+%--------------------------------------
+\input{config/definitions}
+%--------------------------------------
+
+% Landscape
+%--------------------------------------
+\usepackage{pdflscape}
+%--------------------------------------
+
+% dictionary
+%--------------------------------------
+% DE
+\input{dictionary/dictionary}
+%--------------------------------------
+
+% colors
+%--------------------------------------
+\usepackage[table]{xcolor}
+\input{config/colors}
+%--------------------------------------
+
+% images
+%--------------------------------------
+\usepackage{graphicx}
+\input{config/images}
+%--------------------------------------
+
+% Tables
+%--------------------------------------
+\usepackage{longtable}
+%--------------------------------------
+
+% date
+%--------------------------------------
+\usepackage[yyyymmdd]{datetime}
+% format date
+\renewcommand{\dateseparator}{--}
+%--------------------------------------
+
+% Header & footer
+%--------------------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{etoolbox}
+%--------------------------------------
+
+% Enable linking e.g. for table of contents
+%--------------------------------------
+\usepackage{hyperref}
+%--------------------------------------
+
+% Listings - e.g. List of code snippets
+%--------------------------------------
+\usepackage{listings}
+% load style
+\input{config/lstdefinestyle}
+\input{config/snippets}
+% file attachments
+\usepackage{attachfile2}
+%--------------------------------------
+
+% Abbreviations
+%--------------------------------------
+\usepackage[printonlyused]{acronym}
+%--------------------------------------
+
+% Bibliography/References 
+%--------------------------------------
+\usepackage[
+    backend=biber,
+    style=numeric,
+sorting=ynt
+ %style=alphabetic,
+% citestyle=chicago-authordate
+ ]{biblatex}
+% define reference resource
+\addbibresource{base/bibliography/references.bib}
+%--------------------------------------
+
+% Index
+%--------------------------------------
+\usepackage{imakeidx} 
+
+% uncomment to at numbering
+%\indexsetup{level=\chapter} 
+
+% Activate index commands
+\makeindex
+%--------------------------------------
+
+% Appendix
+%--------------------------------------
+\usepackage{appendix}
+\usepackage[german]{minitoc}
+\usepackage{titletoc}
+%--------------------------------------

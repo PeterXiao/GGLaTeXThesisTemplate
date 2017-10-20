@@ -1,0 +1,109 @@
+\chapter{Tables}
+
+% alternate rowcolors for all long-tables
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}{\rowcolors{2}{white}{LightGray}\oldlongtable} {\endoldlongtable}
+
+\begin{longtable}[l]{| p{40mm} | p{95mm} |}
+    \hline
+        \rowcolor{Gray}
+        \textbf{Term} & \textbf{Description}\\
+    \hline
+    
+    \endfirsthead
+    
+    \hline
+        \rowcolor{Gray}
+        \textbf{Term} & \textbf{Description}\\
+    \hline
+    
+    \endhead
+    \endfoot
+        \caption{Beispiel Tabelle}\label{table:kysymys}\\
+    \endlastfoot
+    Lotsoflines & like this like this like this like this like this like this like this like this like this like this like this like this like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+    Lots of lines & like this\\
+    \hline
+\end{longtable}
+
+So kann eine Tabelle referenziert werden: Tabelle \ref{table:kysymys}
