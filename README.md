@@ -1,5 +1,5 @@
 # GGLaTeXThesisTemplate
-LaTex templates for theses.
+LaTeX templates for theses.
 
 ## Compiling
 This LaTeX document is tested on [ShareLaTeX](https://www.sharelatex.com/). 
