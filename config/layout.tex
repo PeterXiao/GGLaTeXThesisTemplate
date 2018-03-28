@@ -27,14 +27,29 @@
 \usepackage{fontspec}
 
 \ifthenelse{\equal{\CONFIGFontFamily}{Arial}}
-    {
-        % Arial - Uses 11pt
-        \setmainfont{arial.ttf}[Ligatures=TeX,Path =fonts/Arial/,BoldFont = arialbd.ttf ,ItalicFont = ariali.ttf ,BoldItalicFont = arialbi.ttf ]
-    }
-    {
-        % Times New Roman - Uses 12pt
-        \setmainfont{times.ttf}[Ligatures=TeX ,Path =fonts/Times New Roman/,BoldFont = timesbd.ttf ,ItalicFont = timesi.ttf ,BoldItalicFont = timesbi.ttf ]
-    }
+{
+    % Arial - Uses 11pt
+    \setmainfont{arial.ttf}[Ligatures=TeX,Path =fonts/Arial/,BoldFont = arialbd.ttf ,ItalicFont = ariali.ttf ,BoldItalicFont = arialbi.ttf ]
+}{}
+
+\ifthenelse{\equal{\CONFIGFontFamily}{Times New Roman}}
+{
+    % Times New Roman - Uses 12pt
+    \setmainfont{times.ttf}[Ligatures=TeX ,Path =fonts/Times New Roman/,BoldFont = timesbd.ttf ,ItalicFont = timesi.ttf ,BoldItalicFont = timesbi.ttf ]
+}{}
+
+\ifthenelse{\equal{\CONFIGFontFamily}{Noto Serif}}
+{
+    % Noto Serif - Uses 11pt
+    \setmainfont{NotoSerif-Regular.ttf}[Ligatures=TeX ,Path =fonts/NotoSerif/,BoldFont = NotoSerif-Bold.ttf ,ItalicFont = NotoSerif-Italic.ttf ,BoldItalicFont = NotoSerif-BoldItalic.ttf ]
+}{}
+
+\ifthenelse{\equal{\CONFIGFontFamily}{Computer Modern Roman}}
+{
+    % Computer Modern Roman - Uses 11pt
+    % Source: https://www.fontsquirrel.com/fonts/computer-modern
+    \setmainfont{cmunrm.ttf}[Ligatures=TeX,Path =fonts/Computer Modern Roman/,BoldFont = cmunbx.ttf ,ItalicFont = cmunti.ttf ,BoldItalicFont = cmunbi.ttf ]
+}
 
 % set line height/spacing
 \renewcommand{\baselinestretch}{1.5}
@@ -114,7 +129,7 @@
 \usepackage{attachfile2}
 %--------------------------------------
 
-% Change numbering for figures and tables. If true the number will be not affected by the chapter number. 
+% Change numbering for figures and tables. If true the number will be not affected by the chapter number.
 %--------------------------------------
 \ifthenelse{\equal{\CONFIGCounterWithoutChapter}{true}}
 {
