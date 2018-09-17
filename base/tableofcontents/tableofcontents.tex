@@ -4,6 +4,9 @@
 % update mark for use of \leftmark and \rightmark
 \markboth{\DICTTableOfContents}{\DICTTableOfContents}
 
-\tableofcontents
+% Fix for hyperref jump
+\phantomsection
+
 % add table of contents entry
 \addstarredchapter{\DICTTableOfContents}
+\tableofcontents
