@@ -35,11 +35,6 @@
 \setcounter{page}{2}
 %--------------------------------------
 
-% Header & footer
-%--------------------------------------
-\input{base/headerfooter/headerfooter}
-%--------------------------------------
-
 % Abstract
 %--------------------------------------
 \ifthenelse{\equal{\CONFIGEnableAbstract}{true}}
@@ -47,6 +42,11 @@
     \input{base/abstract/abstract}
     \newpage
 }{}
+%--------------------------------------
+
+% Header & footer
+%--------------------------------------
+\input{base/headerfooter/headerfooter}
 %--------------------------------------
 
 % Table of contents
